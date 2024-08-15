@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormControl, InputLabel, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 
 interface Option {
   label: string;
@@ -9,24 +8,20 @@ interface Option {
 interface ZSelectProps {
   value: string;
   options: Option[];
-  onChange: (event: SelectChangeEvent<string>) => void; // Adjusted type
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const ZSelect: React.FC<ZSelectProps> = ({ value, options, onChange }) => {
   return (
-    <FormControl fullWidth>
-      <InputLabel>Dropdown</InputLabel>
-      <Select
-        value={value}
-        onChange={onChange}
-        label="Dropdown"
-      >
+    <div className="select-container">
+      <label className="select-label">Dropdown</label>
+      <select value={value} onChange={onChange} className="select-element">
         {options.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
+          <option key={option.value} value={option.value}>
             {option.label}
-          </MenuItem>
+          </option>
         ))}
-      </Select>
-    </FormControl>
+      </select>
+    </div>
   );
 };
