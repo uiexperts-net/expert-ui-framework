@@ -1,36 +1,27 @@
-// src/ui-framework/generic/Text.tsx
-
 import React from 'react';
-import TextField from '@mui/material/TextField';
 
-interface ZTextProps {
+interface Option {
+  label: string;
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  label?: string;
-  placeholder?: string;
-  type?: string;
-  variant?: 'outlined' | 'filled' | 'standard';
-  fullWidth?: boolean;
 }
 
-export const ZText: React.FC<ZTextProps> = ({
-  value,
-  onChange,
-  label = '',
-  placeholder = '',
-  type = 'text',
-  variant = 'outlined',
-  fullWidth = true,
-}) => {
+interface ZSelectProps {
+  value: string;
+  options: Option[];
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+export const ZSelect: React.FC<ZSelectProps> = ({ value, options, onChange }) => {
   return (
-    <TextField
-      value={value}
-      onChange={onChange}
-      label={label}
-      placeholder={placeholder}
-      type={type}
-      variant={variant}
-      fullWidth={fullWidth}
-    />
+    <div className="select-container">
+      <label className="select-label">Dropdown</label>
+      <select value={value} onChange={onChange} className="select-element">
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
