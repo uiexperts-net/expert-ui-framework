@@ -1,5 +1,4 @@
 import React from 'react';
-import { Checkbox, FormControlLabel } from '@mui/material';
 
 interface ZCheckboxProps {
   checked: boolean;
@@ -9,9 +8,16 @@ interface ZCheckboxProps {
 
 export const ZCheckbox: React.FC<ZCheckboxProps> = ({ checked, label, onChange }) => {
   return (
-    <FormControlLabel
-      control={<Checkbox checked={checked} onChange={onChange} />}
-      label={label}
-    />
+    <div className="checkbox-container">
+      <label className="checkbox-label">
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={onChange}
+          className="checkbox-input"
+        />
+        {label}
+      </label>
+    </div>
   );
 };
