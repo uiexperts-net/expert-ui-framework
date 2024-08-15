@@ -1,5 +1,4 @@
 import React from 'react';
-import { RadioGroup, FormControlLabel, Radio } from '@mui/material';
 
 interface Option {
   label: string;
@@ -14,15 +13,20 @@ interface ZRadioGroupProps {
 
 export const ZRadioGroup: React.FC<ZRadioGroupProps> = ({ value, options, onChange }) => {
   return (
-    <RadioGroup value={value} onChange={onChange}>
+    <div className="radio-group">
       {options.map((option) => (
-        <FormControlLabel
-          key={option.value}
-          value={option.value}
-          control={<Radio />}
-          label={option.label}
-        />
+        <label key={option.value} className="radio-label">
+          <input
+            type="radio"
+            name="radio-group"
+            value={option.value}
+            checked={value === option.value}
+            onChange={onChange}
+            className="radio-input"
+          />
+          {option.label}
+        </label>
       ))}
-    </RadioGroup>
+    </div>
   );
 };
