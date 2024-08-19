@@ -6,6 +6,9 @@ import { ZRadioGroup } from './ui-framework/generic/RadioGroup';
 import { ZCheckbox } from './ui-framework/generic/Checkbox';
 import { ZSelect } from './ui-framework/generic/Select';
 import { SelectChangeEvent } from '@mui/material';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { Button, Provider as PaperProvider } from 'react-native-paper';
+import CustomText from './Text';
 
 function App() {
   const [curName, setCurName] = useState('');
@@ -18,6 +21,21 @@ function App() {
     { label: 'Option 2', value: 'option2' },
     { label: 'Option 3', value: 'option3' },
   ];
+  const handlePress = () => {
+    alert('Button Pressed!');
+  };
+
+  return (
+    <PaperProvider>
+      <SafeAreaView style={styles.container}>
+        <CustomText content="Welcome to React Native Paper!" />
+        <Button mode="contained" onPress={handlePress} style={styles.button}>
+          Press me
+        </Button>
+      </SafeAreaView>
+    </PaperProvider>
+  );
+};
 
   // Explicitly type the event parameter
   const handleSelectChange = (event: SelectChangeEvent<string>) => {
@@ -70,3 +88,4 @@ function App() {
 }
 
 export default App;
+
