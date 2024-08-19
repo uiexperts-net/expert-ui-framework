@@ -1,3 +1,4 @@
+
 {
   "name": "vite-project",
   "private": true,
@@ -48,3 +49,4 @@
     "vite": "^5.3.4"
   }
 }
+
