@@ -51,4 +51,4 @@ First of all, make sure you have these installed on your system:
 ### Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com
+https://github.com/uiexperts-net/expert-ui-framework.git
