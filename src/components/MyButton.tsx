@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { StyleSheet} from 'react-native';
-import { Button } from 'react-native-paper';
-import View
+import { StyleSheet, View } from 'react-native';
+import { Button, Text } from 'react-native-paper';
+
 const MyButton: React.FC = () => {
   return (
     <View style={styles.container}>
@@ -20,6 +20,7 @@ export default MyButton;
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
