@@ -1,6 +1,6 @@
-# Button Group Component Application
+# Button Group and Autocomplete Components Application
 
-This is a React application that demonstrates a Button Group component built using TypeScript, Bootstrap for styling, and Storybook for component development and testing.
+This React application demonstrates both a Button Group component and an Autocomplete component. Both components are built using TypeScript, styled with Bootstrap, and integrated with Storybook for component-driven development and Jest for unit testing.
 
 ## Table of Contents
 
@@ -19,14 +19,19 @@ This is a React application that demonstrates a Button Group component built usi
 
 ## Project Overview
 
-This project showcases a Button Group component where users can interact with multiple buttons displayed in a group. The component is styled with Bootstrap and built using TypeScript. Storybook is integrated for visualizing and testing the component in isolation. Unit testing is performed using Jest.
+This project showcases two main components:
+
+1. **Button Group Component**: A component where users can interact with multiple buttons displayed in a group. The component is styled with Bootstrap and built using TypeScript. Storybook is integrated for visualizing and testing the component in isolation. Unit testing is performed using Jest.
+
+2. **Autocomplete Component**: A component that allows users to type in an input field and get live suggestions as they type. The component is styled with Bootstrap and built using TypeScript, with Storybook for visualization and Jest for unit testing.
 
 ## Features
 
 - **Button Group Functionality**: Renders a group of buttons with customizable text and styling.
+- **Autocomplete Functionality**: Provides live suggestions as the user types in the input field.
 - **Bootstrap Styling**: Utilizes Bootstrap classes for consistent and responsive design.
-- **Storybook Integration**: Visualize and interact with the Button Group component in isolation.
-- **Unit Testing**: Jest and React Testing Library are used to test the Button Group component's functionality.
+- **Storybook Integration**: Visualize and interact with both components in isolation.
+- **Unit Testing**: Jest and React Testing Library are used to test the components' functionality.
 
 ## Getting Started
 
@@ -44,5 +49,5 @@ Make sure you have the following installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone 
-   cd button-group-component
+   git clone https://github.com/uiexperts-net/expert-ui-framework.git
+   cd expert-ui-framework

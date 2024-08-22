@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
+// Test for Button Group Example heading
 test('renders Button Group Example heading', () => {
   render(<App />);
   
@@ -10,6 +11,7 @@ test('renders Button Group Example heading', () => {
   expect(headingElement).toBeInTheDocument();
 });
 
+// Test for rendering all buttons in the Button Group
 test('renders all buttons in the Button Group', () => {
   render(<App />);
   
@@ -21,4 +23,11 @@ test('renders all buttons in the Button Group', () => {
   expect(button1).toBeInTheDocument();
   expect(button2).toBeInTheDocument();
   expect(button3).toBeInTheDocument();
+});
+
+// Test for React learn link (if applicable)
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
 });
