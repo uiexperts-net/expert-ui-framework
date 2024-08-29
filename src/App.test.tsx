@@ -1,28 +1,14 @@
-// app.test.tsx
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import App from './App';
 
-describe('App Component', () => {
-  beforeEach(() => {
-    render(<App />);
-  });
-
-  test('should update and display selected radio option', () => {
-    const radioOption1 = screen.getByLabelText('Option 1');
-    fireEvent.click(radioOption1);
-
-    expect(screen.getByText('Selected Radio Option: Option 1')).toBeInTheDocument();
-  });
-
-  test('should update and display selected rating', () => {
-    const stars = screen.getAllByTestId('star');
-    expect(stars).toHaveLength(5);
-
-    const thirdStar = stars[2];
-    fireEvent.click(thirdStar);
-
-    expect(screen.getByText('Selected Rating: 3')).toBeInTheDocument();
-  });
+test('should update and display selected option from dropdown', () => {
+  render(<App />);
+  
+  // Use getByRole to select the dropdown
+  const dropdown = screen.getByRole('combobox'); // Combobox is the role for dropdowns/select elements
+  
+  fireEvent.change(dropdown, { target: { value: 'Option 2' } });
+  
+  // Check if the selected option is displayed
+  expect(screen.getByText('Selected Option: Option 2')).toBeInTheDocument();
 });
