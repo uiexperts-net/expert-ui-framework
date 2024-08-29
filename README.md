@@ -1,53 +1,46 @@
-# Button Group and Autocomplete Components Application
+# Getting Started with Create React App
 
-This React application demonstrates both a Button Group component and an Autocomplete component. Both components are built using TypeScript, styled with Bootstrap, and integrated with Storybook for component-driven development and Jest for unit testing.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
+## Available Scripts
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Running the Application](#running-the-application)
-- [Running Storybook](#running-storybook)
-- [Running Unit Tests](#running-unit-tests)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+In the project directory, you can run:
 
-## Project Overview
+### `npm start`
 
-This project showcases two main components:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. **Button Group Component**: A component where users can interact with multiple buttons displayed in a group. The component is styled with Bootstrap and built using TypeScript. Storybook is integrated for visualizing and testing the component in isolation. Unit testing is performed using Jest.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-2. **Autocomplete Component**: A component that allows users to type in an input field and get live suggestions as they type. The component is styled with Bootstrap and built using TypeScript, with Storybook for visualization and Jest for unit testing.
+### `npm test`
 
-## Features
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **Button Group Functionality**: Renders a group of buttons with customizable text and styling.
-- **Autocomplete Functionality**: Provides live suggestions as the user types in the input field.
-- **Bootstrap Styling**: Utilizes Bootstrap classes for consistent and responsive design.
-- **Storybook Integration**: Visualize and interact with both components in isolation.
-- **Unit Testing**: Jest and React Testing Library are used to test the components' functionality.
+### `npm run build`
 
-## Getting Started
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Follow these instructions to set up and run the project locally.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Prerequisites
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Make sure you have the following installed on your system:
+### `npm run eject`
 
-- [Node.js](https://nodejs.org/) (version 14.x or later)
-- [npm](https://www.npmjs.com/) (Node package manager)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Installation
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-1. Clone the repository:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-   ```bash
-   git clone https://github.com/uiexperts-net/expert-ui-framework.git
-   cd expert-ui-framework
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
