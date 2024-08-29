@@ -1,5 +1,24 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+
+import '@testing-library/jest-dom'; // Import the matchers
+import { act } from 'react';  // Use react's act
+import CheckboxComponent from './component/CheckboxComponent';
+
+test('CheckboxComponent renders with label and toggles checkbox', () => {
+  const handleChange = jest.fn();
+
+  // Use act for wrapping updates
+  act(() => {
+    render(<CheckboxComponent label="Test Checkbox" checked={false} onChange={handleChange} />);
+  });
+
+  const checkbox = screen.getByRole('checkbox');
+  const label = screen.getByText('Test Checkbox');
+
+  expect(checkbox).toBeInTheDocument();  // Correct matcher
+  expect(label).toBeInTheDocument();2
+
 import App from './App';  // Ensure this path is correct
 
 test('renders the expected content in App component', () => {
@@ -59,4 +78,5 @@ test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
+
 });

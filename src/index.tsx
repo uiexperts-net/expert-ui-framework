@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -30,6 +31,7 @@ const root = ReactDOM.createRoot(
 );
 
 // Render the App component
+
 
 root.render(
   <React.StrictMode>
