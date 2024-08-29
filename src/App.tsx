@@ -1,3 +1,11 @@
+
+import React from 'react';
+import Autocomplete from './components/Autocomplete/Autocomplete';
+import './App.css';
+
+function App() {
+  const suggestions = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry','Fig','Guava','Hazelnuts','Imbu','Jackfruit','Kiwi','Lemon','Mango','Neem','Olive'];
+
 import React, { useState } from 'react';
 import CheckboxComponent from './component/CheckboxComponent'; // Adjust the path based on your folder structure
 
@@ -59,9 +67,16 @@ import { ZAutocomplete } from './components/ZAutocomplete';
 const App: React.FC = () => {
   const options = ['Option 1', 'Option 2', 'Option 3'];
 
+
   return (
     <div className="App">
       <h1>Autocomplete Component</h1>
+
+      <Autocomplete suggestions={suggestions} />
+    </div>
+  );
+}
+
       <ZAutocomplete options={options} label="Select an option" /
 import React from 'react';
 import ButtonGroup from './component/ButtonGroup';

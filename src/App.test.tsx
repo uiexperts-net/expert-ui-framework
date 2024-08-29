@@ -1,6 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
+import App from './App';
+
+
+
 import '@testing-library/jest-dom'; // Import the matchers
 import { act } from 'react';  // Use react's act
 import CheckboxComponent from './component/CheckboxComponent';
@@ -74,6 +78,7 @@ test('renders all buttons in the Button Group', () => {
 });
 
 // Test for React learn link (if applicable)
+
 test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
