@@ -2,8 +2,6 @@
   text-align: center;
 }
 
-
-
 .radio-button {
   margin: 10px 0;
 }
@@ -45,5 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-
 }
