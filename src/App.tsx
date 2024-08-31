@@ -1,4 +1,15 @@
 
+// src/App.tsx
+import React from 'react';
+import TextFieldComponent from './components/TextFieldComponent';
+
+const App: React.FC = () => {
+  const [value, setValue] = React.useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+
+
 import React, { useState } from 'react';
 import Switch from './Switch'; // Ensure the correct path
 import TextField from './TextField'; // Ensure the correct path
@@ -79,10 +90,20 @@ const App: React.FC = () => {
 
   const handleSubscribeNewsletterChange = (checked: boolean) => {
     setSubscribeNewsletter(checked);
+
   };
 
   return (
     <div>
+
+      <h1>TextFieldComponent Demo</h1>
+      <TextFieldComponent 
+        label="Enter Text" 
+        value={value} 
+        onChange={handleChange} 
+        placeholder="Type something..." 
+      />
+
       <h1>Generic Checkbox Example</h1>
 
       {/* Checkbox for accepting terms */}
@@ -172,10 +193,10 @@ const App: React.FC = () => {
           Click Me
         </ZButton>
       </div>
+
     </div>
   );
 };
-
 
 
 export default App;

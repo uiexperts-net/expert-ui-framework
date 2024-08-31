@@ -1,4 +1,14 @@
 
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders TextFieldComponent demo heading', () => {
+  render(<App />);
+  const headingElement = screen.getByText(/TextFieldComponent Demo/i);
+  expect(headingElement).toBeInTheDocument();
+});
+
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'; // for the `toBeInTheDocument` matcher
@@ -149,5 +159,6 @@ test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
+
 
 
