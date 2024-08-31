@@ -1,22 +1,17 @@
 // src/App.tsx
 import React from 'react';
-import TextFieldComponent from './components/TextFieldComponent';
+import FloatingActionButton from './component/FloatingActionButton';
 
 const App: React.FC = () => {
-  const [value, setValue] = React.useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+  const handleClick = () => {
+    window.alert('Floating Action Button Clicked!');
   };
 
   return (
     <div>
-      <h1>TextFieldComponent Demo</h1>
-      <TextFieldComponent 
-        label="Enter Text" 
-        value={value} 
-        onChange={handleChange} 
-        placeholder="Type something..." 
+      <FloatingActionButton
+        icon="fas fa-plus"  // Pass the `icon` prop here
+        onClick={handleClick}
       />
     </div>
   );
