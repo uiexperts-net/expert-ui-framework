@@ -1,37 +1,33 @@
-// src/components/TextFieldComponent.tsx
-import React from 'react';
+import React, { useState } from 'react';
 
-interface TextFieldComponentProps {
-  label: string;
+// Define the props interface for TextFieldComponent
+export interface TextFieldProps {
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  disabled?: boolean;
+  onChange: (value: string) => void;
+  placeholder: string;
 }
 
-const TextFieldComponent: React.FC<TextFieldComponentProps> = ({
-  label,
-  value,
-  onChange,
-  placeholder = '',
-  disabled = false,
-}) => {
-  const inputId = `textfield-${label.replace(/\s+/g, '-').toLowerCase()}`;
+// The TextFieldComponent
+const TextFieldComponent: React.FC<TextFieldProps> = ({ value, onChange, placeholder }) => {
+  const [inputValue, setInputValue] = useState(value);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setInputValue(newValue);
+    onChange(newValue);
+  };
 
   return (
-    <div className="form-group">
-      <label htmlFor={inputId}>{label}</label>
+    <div>
       <input
-        id={inputId}
         type="text"
-        className="form-control"
-        value={value}
-        onChange={onChange}
+        value={inputValue}
+        onChange={handleInputChange}
         placeholder={placeholder}
-        disabled={disabled}
       />
     </div>
   );
 };
 
+// Export TextFieldComponent as a named export
 export default TextFieldComponent;

@@ -1,32 +1,17 @@
-import React, { ChangeEvent, useState } from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import TextFieldComponent from '../components/TextFieldComponent';
+import React from 'react';
+import { StoryFn, Meta } from '@storybook/react';
+import TextFieldComponent, { TextFieldProps } from './TextFieldComponent';
 
 export default {
-  title: 'Components/TextField',
+  title: 'Example/TextFieldComponent',
   component: TextFieldComponent,
-} as Meta<typeof TextFieldComponent>;
+} as Meta;
 
-const Template: StoryFn<typeof TextFieldComponent> = (args) => {
-  const [value, setValue] = useState('');
-  
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-  
-  return <TextFieldComponent {...args} value={value} onChange={handleChange} />;
-};
+const Template: StoryFn<TextFieldProps> = (args: TextFieldProps) => <TextFieldComponent {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Default Label',
-  placeholder: 'Type here...',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Disabled Field',
   value: '',
-  placeholder: 'Cannot type here',
-  disabled: true,
+  onChange: (value: string) => console.log(value),
+  placeholder: 'Enter text',
 };
