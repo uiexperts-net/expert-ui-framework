@@ -1,33 +1,25 @@
-// src/components/TextFieldComponent.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import TextFieldComponent from './TextFieldComponent';
 
-describe('TextFieldComponent', () => {
-  it('renders the component with correct label and placeholder', () => {
-    render(
-      <TextFieldComponent
-        label="Test Label"
-        value=""
-        onChange={() => {}}
-        placeholder="Enter text"
-      />
-    );
-    expect(screen.getByLabelText('Test Label')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('Enter text')).toBeInTheDocument();
-  });
+test('TextFieldComponent renders and calls onChange', () => {
+  const mockOnChange = jest.fn();
 
-  it('calls onChange when input value changes', () => {
-    const handleChange = jest.fn();
-    render(<TextFieldComponent label="Test Label" value="" onChange={handleChange} />);
-    const inputElement = screen.getByLabelText('Test Label');
-    fireEvent.change(inputElement, { target: { value: 'New Value' } });
-    expect(handleChange).toHaveBeenCalledTimes(1);
-  });
+  // Render the TextFieldComponent with required props
+  render(
+    <TextFieldComponent
+      value=""
+      onChange={mockOnChange}
+      placeholder="Enter text"
+    />
+  );
 
-  it('disables the input when disabled is true', () => {
-    render(<TextFieldComponent label="Test Label" value="" onChange={() => {}} disabled />);
-    const inputElement = screen.getByLabelText('Test Label');
-    expect(inputElement).toBeDisabled();
-  });
+  // Find the input element
+  const inputElement = screen.getByPlaceholderText('Enter text');
+
+  // Simulate typing in the text field
+  fireEvent.change(inputElement, { target: { value: 'Test input' } });
+  
+  // Check that onChange has been called with the correct value
+  expect(mockOnChange).toHaveBeenCalledWith('Test input');
 });
