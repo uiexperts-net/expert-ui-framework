@@ -1,4 +1,9 @@
 
+// app.test.tsx
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+
+
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
@@ -119,46 +124,36 @@ test('renders the expected content in App component', () => {
 import '@testing-library/jest-dom';
 import App from './App';
 
-test('renders autocomplete component', () => {
-  render(<App />);
-  const headerElement = screen.getByText(/Autocomplete Component/i);
-  expect(headerElement).toBeInTheDocument();
-  
-  const inputElement = screen.getByLabelText(/Select an option/i);
-  expect(inputElement).toBeInTheDocument();
+describe('App Component', () => {
+  beforeEach(() => {
+    render(<App />);
+  });
 
-import App from './App';
+  test('should update and display selected radio option', () => {
+    const radioOption1 = screen.getByLabelText('Option 1');
+    fireEvent.click(radioOption1);
 
-// Test for Button Group Example heading
-test('renders Button Group Example heading', () => {
-  render(<App />);
-  
-  // Check if the heading is rendered
-  const headingElement = screen.getByText(/Button Group Example/i);
-  expect(headingElement).toBeInTheDocument();
+    expect(screen.getByText('Selected Radio Option: Option 1')).toBeInTheDocument();
+  });
+
+  test('should update and display selected rating', () => {
+    const stars = screen.getAllByTestId('star');
+    expect(stars).toHaveLength(5);
+
+
+    const thirdStar = stars[2];
+    fireEvent.click(thirdStar);
+
+    expect(screen.getByText('Selected Rating: 3')).toBeInTheDocument();
+  });
 });
-
-// Test for rendering all buttons in the Button Group
-test('renders all buttons in the Button Group', () => {
-  render(<App />);
-  
-  // Check if all buttons are rendered
-  const button1 = screen.getByText('Button 1');
-  const button2 = screen.getByText('Button 2');
-  const button3 = screen.getByText('Button 3');
-
-  expect(button1).toBeInTheDocument();
-  expect(button2).toBeInTheDocument();
-  expect(button3).toBeInTheDocument();
-});
-
-// Test for React learn link (if applicable)
-
+=======
 
 test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
+
 
 
 

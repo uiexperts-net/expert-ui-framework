@@ -1,3 +1,5 @@
+// App.tsx
+=======
 
 // src/App.tsx
 import React from 'react';
@@ -75,19 +77,40 @@ import './App.css';
 function App() {
   const suggestions = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry','Fig','Guava','Hazelnuts','Imbu','Jackfruit','Kiwi','Lemon','Mango','Neem','Olive'];
 
+
 import React, { useState } from 'react';
-import CheckboxComponent from './component/CheckboxComponent'; // Adjust the path based on your folder structure
+import 'bootstrap/dist/css/bootstrap.min.css';
+import RadioGroup from './component/RadioGroup';
+import Rating from './component/Rating';
 
 const App: React.FC = () => {
-  // State management for multiple checkboxes
-  const [acceptTerms, setAcceptTerms] = useState<boolean>(false);
-  const [subscribeNewsletter, setSubscribeNewsletter] = useState<boolean>(false);
+  const [radioValue, setRadioValue] = useState<string>('');
+  const [ratingValue, setRatingValue] = useState<number>(0);
 
-  // Handle changes for the checkboxes
-  const handleAcceptTermsChange = (checked: boolean) => {
-    setAcceptTerms(checked);
+  const handleRadioChange = (value: string) => {
+    setRadioValue(value);
+    console.log(`Selected Radio Option: ${value}`);
   };
 
+
+  const handleRatingChange = (rating: number) => {
+    setRatingValue(rating);
+    console.log(`Selected Rating: ${rating}`);
+  };
+
+  return (
+    <div className="container mt-5">
+      <h1 className="mb-4">React RadioGroup and Rating Components</h1>
+      
+      <div className="mb-4">
+        <h3>Select an Option</h3>
+        <RadioGroup
+          options={['Option 1', 'Option 2', 'Option 3']}
+          name="exampleRadioGroup"
+          onChange={handleRadioChange}
+        />
+        <p>Selected Radio Option: {radioValue}</p>
+=======
   const handleSubscribeNewsletterChange = (checked: boolean) => {
     setSubscribeNewsletter(checked);
 
@@ -185,13 +208,13 @@ const App: React.FC = () => {
       <div className="container mt-5">
         <h1>Autocomplete Component Example</h1>
         <Autocomplete suggestions={suggestions} />
+
       </div>
 
-      {/* ZButton Example */}
-      <div className="container mt-5">
-        <ZButton variant="contained" color="primary" onClick={() => alert('Button clicked!')}>
-          Click Me
-        </ZButton>
+      <div className="mb-4">
+        <h3>Rate this Component</h3>
+        <Rating totalStars={5} onRate={handleRatingChange} />
+        <p>Selected Rating: {ratingValue}</p>
       </div>
 
     </div>
