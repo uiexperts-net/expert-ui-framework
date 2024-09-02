@@ -1,4 +1,23 @@
 {
   "name": "RadioButtonApp",
-  "displayName": "RadioButtonApp"
+  "displayName": "RadioButtonApp",
+  "name": "Textfield",
+  "displayName": "Textfield",
+  "name": "TransferList",
+  "displayName": "TransferList",
+    "name": "dropdown",
+  "displayName": "dropdown",
+    "name": "checkbox",
+  "displayName": "checkbox",
+    "name": "Ratingbutton",
+  "displayName": "Ratingbutton",
+    "name": "SwitchSlider",
+  "displayName": "SwitchSlider",
+    "name": "Floatingbutton",
+  "displayName": "Floatingbutton",
+    "name": "Togglebutton",
+  "displayName": "Togglebutton",
+  "name": "buttongroup",
+  "displayName": "ButtonGroup"
+  
 }
