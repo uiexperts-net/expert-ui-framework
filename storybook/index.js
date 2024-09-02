@@ -1,7 +1,12 @@
-// storybook/index.js
-import { getStorybookUI, configure } from '@storybook/react-native';
-import { AppRegistry } from 'react-native';
 
+import { AppRegistry } from 'react-native';
+import { getStorybookUI, configure } from '@storybook/react-native';
+import { name as Text } from '../app.json';
+
+// Import stories
+configure(() => {
+  require('../src/stories');
+}, module);
 // Import stories
 const req = require.context('../src/stories', true, /\.stories\.tsx$/);
 function loadStories() {
