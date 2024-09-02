@@ -1,7 +1,22 @@
+// App.tsx
+import React from 'react';
 import React, { useState } from 'react';
 import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
 import { RadioButton, Button } from 'react-native-paper';
 import TextField from './src/components/TextField';
+import TransferList from './src/components/TransferList';
+const items = [
+  { id: '1', title: 'Item 1' },
+  { id: '2', title: 'Item 2' },
+  { id: '3', title: 'Item 3' },
+];
+
+const App = () => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>My Transfer List App</Text>
+    <TransferList items={items} onTransfer={(selected) => console.log('Transferred:', selected)} />
+  </View>
+);
 
 const App = () => {
   return (
@@ -75,8 +90,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
-export default App;
-
 
 export default App;

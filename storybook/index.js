@@ -1,4 +1,3 @@
-
 import { AppRegistry } from 'react-native';
 import { getStorybookUI, configure } from '@storybook/react-native';
 import { name as Text } from '../app.json';
@@ -12,7 +11,12 @@ const req = require.context('../src/stories', true, /\.stories\.tsx$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
+configure(() => {
+  require('../src/stories/TransferList.stories');
+}, module);
 
+const StorybookUIRoot = getStorybookUI({});
+AppRegistry.registerComponent('TransferListApp', () => StorybookUIRoot);
 // Configure Storybook
 configure(loadStories, module);
 
@@ -20,5 +24,4 @@ const StorybookUIRoot = getStorybookUI({});
 
 // Register Storybook as a React Native app
 AppRegistry.registerComponent('TextFieldApp', () => StorybookUIRoot);
-
 export default StorybookUIRoot;
