@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RadioButton from './components/Radio';
+import List from './components/List.tsx';
 import './App.css';
 
 const App = () => {
@@ -42,5 +43,20 @@ const App = () => {
     </div>
   );
 };
+function App() {
+  const items = ['Apple', 'Banana', 'Cherry'];
+
+  const handleItemClick = (item: string) => {
+    alert(`You clicked on ${item}`);
+  };
+
+  return (
+    <div>
+      <h1>My List</h1>
+      <List items={items} onItemClick={handleItemClick} />
+    </div>
+  );
+}
+
 
 export default App;
