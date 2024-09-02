@@ -1,16 +1,31 @@
 
+import React from 'react';
+
+
 // app.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 
+
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders TextFieldComponent demo heading', () => {
+test('renders Floating Action Button', () => {
   render(<App />);
-  const headingElement = screen.getByText(/TextFieldComponent Demo/i);
-  expect(headingElement).toBeInTheDocument();
+
+  const fabButton = screen.getByRole('button');
+  expect(fabButton).toBeInTheDocument();
+  expect(fabButton.querySelector('i')).toHaveClass('fas fa-plus');
+});
+
+test('clicking Floating Action Button triggers alert', () => {
+  render(<App />);
+
+  const fabButton = screen.getByRole('button');
+  window.alert = jest.fn();  // Mock alert
+  fabButton.click();
+  expect(window.alert).toHaveBeenCalledWith('Floating Action Button Clicked!');  // Update with the actual message
 });
 
 
@@ -73,7 +88,7 @@ describe('App component', () => {
     expect(toggleButton).toHaveTextContent('OFF');
   });
 });
-=======
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -147,7 +162,7 @@ describe('App Component', () => {
     expect(screen.getByText('Selected Rating: 3')).toBeInTheDocument();
   });
 });
-=======
+
 
 test('renders learn react link', () => {
   render(<App />);

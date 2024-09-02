@@ -1,11 +1,14 @@
 // App.tsx
-=======
 
 // src/App.tsx
 import React from 'react';
-import TextFieldComponent from './components/TextFieldComponent';
+import FloatingActionButton from './component/FloatingActionButton';
 
 const App: React.FC = () => {
+
+  const handleClick = () => {
+    window.alert('Floating Action Button Clicked!');
+
   const [value, setValue] = React.useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,14 +113,20 @@ const App: React.FC = () => {
           onChange={handleRadioChange}
         />
         <p>Selected Radio Option: {radioValue}</p>
-=======
+
   const handleSubscribeNewsletterChange = (checked: boolean) => {
     setSubscribeNewsletter(checked);
+
 
   };
 
   return (
     <div>
+
+      <FloatingActionButton
+        icon="fas fa-plus"  // Pass the `icon` prop here
+        onClick={handleClick}
+
 
       <h1>TextFieldComponent Demo</h1>
       <TextFieldComponent 
@@ -125,6 +134,7 @@ const App: React.FC = () => {
         value={value} 
         onChange={handleChange} 
         placeholder="Type something..." 
+
       />
 
       <h1>Generic Checkbox Example</h1>
