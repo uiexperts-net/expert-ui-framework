@@ -1,3 +1,4 @@
+
 // App.tsx
 
 // src/App.tsx
@@ -81,37 +82,44 @@ function App() {
   const suggestions = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry','Fig','Guava','Hazelnuts','Imbu','Jackfruit','Kiwi','Lemon','Mango','Neem','Olive'];
 
 
+
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RadioGroup from './component/RadioGroup';
-import Rating from './component/Rating';
+import Dropdown from './component/Dropdown';
+import Slider from './component/Slider';
 
 const App: React.FC = () => {
-  const [radioValue, setRadioValue] = useState<string>('');
-  const [ratingValue, setRatingValue] = useState<number>(0);
+  const [selectedOption, setSelectedOption] = useState<string>('');
+  const [sliderValue, setSliderValue] = useState<number>(50);
 
-  const handleRadioChange = (value: string) => {
-    setRadioValue(value);
-    console.log(`Selected Radio Option: ${value}`);
+  const handleDropdownChange = (option: string) => {
+    setSelectedOption(option);
   };
 
+
+  const handleSliderChange = (value: number) => {
+    setSliderValue(value);
 
   const handleRatingChange = (rating: number) => {
     setRatingValue(rating);
     console.log(`Selected Rating: ${rating}`);
+
   };
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">React RadioGroup and Rating Components</h1>
+      <h1 className="mb-4">React Dropdown and Slider Components</h1>
       
       <div className="mb-4">
         <h3>Select an Option</h3>
-        <RadioGroup
+        <Dropdown
+          title="Select an Option"
           options={['Option 1', 'Option 2', 'Option 3']}
-          name="exampleRadioGroup"
-          onChange={handleRadioChange}
+          onSelect={handleDropdownChange}
         />
+
+        <p>Selected Option: {selectedOption}</p>
+
         <p>Selected Radio Option: {radioValue}</p>
 
   const handleSubscribeNewsletterChange = (checked: boolean) => {
@@ -219,12 +227,19 @@ const App: React.FC = () => {
         <h1>Autocomplete Component Example</h1>
         <Autocomplete suggestions={suggestions} />
 
+
       </div>
 
       <div className="mb-4">
-        <h3>Rate this Component</h3>
-        <Rating totalStars={5} onRate={handleRatingChange} />
-        <p>Selected Rating: {ratingValue}</p>
+        <h3>Adjust Slider</h3>
+        <Slider
+          min={0}
+          max={100}
+          step={1}
+          value={sliderValue}
+          onChange={handleSliderChange}
+        />
+        <p>Slider Value: {sliderValue}</p>
       </div>
 
     </div>

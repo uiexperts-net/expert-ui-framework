@@ -1,5 +1,8 @@
 {
 
+  "name": "dropdown_slider",
+
+
   "name": "floating_switch_text",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +10,7 @@
 
 
   "name": "radiogroup_rating-component",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -71,7 +75,6 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
 
