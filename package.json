@@ -1,5 +1,14 @@
 {
   "name": "RadioButtonApp",
+  "name": "TextField",
+  "name": "TransferList",
+  "name": "buttongroup",
+  "name": "dropdown",
+  "name": "checkbox",
+  "name": "Ratingbutton",
+  "name": "SwitchSlider",
+  "name": "Floatingbutton",
+  "name": "Togglebutton",
   "version": "0.0.1",
   "private": true,
   "scripts": {
