@@ -1,5 +1,9 @@
 
 {
+  "name": "navi-cmpnt",
+
+
+{
   "name": "surfce-cmpnt",
 
 
@@ -9,6 +13,7 @@
 
   "name": "feedbck-cmpnt",
   "name": "list",
+
 
 
 
@@ -36,6 +41,7 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "react-testing-library": "^8.0.1",
+
 
 
     "web-vitals": "^2.1.4"
@@ -68,7 +74,10 @@
     ]
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+
     "@chromatic-com/storybook": "^1.8.0",
+
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
