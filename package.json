@@ -1,18 +1,49 @@
+
 {
   "name": "navi-cmpnt",
+
+
+{
+  "name": "surfce-cmpnt",
+
+
+{
+  "name": "dd-cmpnt",
+
+
+  "name": "feedbck-cmpnt",
+  "name": "list",
+
+
+
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
+
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "bootstrap": "^5.3.3",
+
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
+
+
+
+    "jest": "^29.7.0",
+
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "react-testing-library": "^8.0.1",
+
+
+
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,6 +75,9 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
+
+    "@chromatic-com/storybook": "^1.8.0",
+
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
