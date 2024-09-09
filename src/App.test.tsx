@@ -1,3 +1,4 @@
+
 import { render, screen, fireEvent } from '@testing-library/react';
 
 import '@testing-library/jest-dom';
@@ -26,3 +27,4 @@ test('renders Feedback component and checks functionality', () => {
   const updatedFeedbackElement = screen.getByText(/updated feedback message/i).parentElement;
   expect(updatedFeedbackElement).toHaveClass('feedback-success'); // Assuming the updated type is 'success'
 });
+

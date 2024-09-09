@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Feedback from './component/Feedback';
 
@@ -13,8 +14,14 @@ function App() {
       message: 'This is an updated feedback message.',
       type: 'success', // Updated type
     });
-  };
+=======
+import React from 'react';
+import ButtonComponent from './components/ButtonComponent';
+const App: React.FC = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
 
+  };
   return (
     <div className="container mt-5">
       <h1>Feedback Component Example</h1>
@@ -28,5 +35,13 @@ function App() {
     </div>
   );
 }
+
+=======
+    <div>
+      <h1>Button Example</h1>
+      <ButtonComponent label="Click Me" onClick={handleClick} />
+          </div>
+  );
+};
 
 export default App;
