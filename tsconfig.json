@@ -3,6 +3,7 @@
 
 
 
+
     "target": "es5",                         // Older ECMAScript target for compatibility
     "lib": ["dom", "dom.iterable", "esnext"], // Include DOM and ESNext features
     "jsx": "react-jsx",                      // Enable JSX with new JSX transform
@@ -30,6 +31,7 @@
 
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+
 
 
 

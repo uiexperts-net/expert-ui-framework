@@ -1,5 +1,15 @@
 
 import React, { useState } from 'react';
+import Surface from './component/Surface';
+
+function App() {
+  const [content, setContent] = useState('Default Content');
+
+  const handleChangeContent = () => {
+    setContent(content === 'Default Content' ? 'Updated Content' : 'Default Content');
+
+
+import React, { useState } from 'react';
 import DataDisplay from './component/DataDisplay';
 
 function App() {
@@ -8,10 +18,24 @@ function App() {
   // Example function to update the data
   const updateData = () => {
     setData(['Item 1', 'Item 2', 'Item 3']);
+
   };
 
   return (
     <div className="container mt-5">
+
+      <h1>Surface Component Example</h1>
+      <button className="btn btn-primary mb-3" onClick={handleChangeContent}>
+        Toggle Content
+      </button>
+      <Surface
+        color="lightblue"
+        width="300px"
+        height="200px"
+      >
+        {content}
+      </Surface>
+
       <h1>Data Display Component Example</h1>
       <button className="btn btn-primary mb-3" onClick={updateData}>
         Update Data
@@ -55,9 +79,11 @@ const App: React.FC = () => {
         type={feedback.type}
 
       />
+
     </div>
   );
 }
+
 
 
     <div>
@@ -66,6 +92,7 @@ const App: React.FC = () => {
           </div>
   );
 };
+
 
 
 export default App;
