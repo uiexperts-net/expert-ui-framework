@@ -1,4 +1,13 @@
 
+import React, { useState } from 'react';
+import LayoutComponent from './component/LayoutComponent';
+
+function App() {
+  const [message, setMessage] = useState('Click the button!');
+
+  const handleClick = () => {
+    setMessage('Button clicked!');
+
 // src/App.tsx
 
 import React from 'react';
@@ -39,10 +48,25 @@ function App() {
   const updateData = () => {
     setData(['Item 1', 'Item 2', 'Item 3']);
 
+
   };
 
   return (
     <div className="container mt-5">
+      <h1>Layout Component Example with Clickable Button</h1>
+      <LayoutComponent
+        header={<h1>Header Section</h1>}
+        content={
+          <div>
+            <p>{message}</p>
+            <button className="btn btn-primary" onClick={handleClick}>
+              Click Me
+            </button>
+          </div>
+        }
+        footer={<p>Footer Section</p>}
+      />
+
 
       <h1>Surface Component Example</h1>
       <button className="btn btn-primary mb-3" onClick={handleChangeContent}>
@@ -101,9 +125,11 @@ const App: React.FC = () => {
       />
 
 
+
     </div>
   );
 }
+
 
 
 
@@ -114,6 +140,7 @@ const App: React.FC = () => {
           </div>
   );
 };
+
 
 
 
