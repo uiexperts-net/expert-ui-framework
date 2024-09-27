@@ -1,5 +1,32 @@
 {
   "compilerOptions": {
+
+    "strict": true,
+    "module": "ESNext",
+    "target": "ES5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["jest", "@testing-library/jest-dom", "@storybook/react"],
+    "baseUrl": "./src",       // Optional: Allows absolute imports from `src`
+    "paths": {                // Optional: Define custom path aliases if needed
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "lib": ["DOM", "ESNext"],  // Optional: Include specific libraries like DOM or ESNext
+    "outDir": "./dist",        // Optional: Output compiled files to the `dist` folder
+    "sourceMap": true          // Optional: Generates source maps for easier debugging
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"],      // Optional: Ensure only source files are compiled
+  "compileOnSave": false        // Optional: Disable automatic compilation on file save
+}
+
+
     "target": "es5",                         // Older ECMAScript target for compatibility
     "lib": ["dom", "dom.iterable", "esnext"], // Include DOM and ESNext features
     "jsx": "react-jsx",                      // Enable JSX with new JSX transform
@@ -51,3 +78,4 @@
     "src"
   ]
 }
+

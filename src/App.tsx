@@ -1,5 +1,18 @@
 
 import React from 'react';
+import Hmgrp from './Components/ContactList';
+
+function App() {
+  return (
+    <div className="App">
+      <Hmgrp />
+    </div>
+  );
+}
+
+
+
+import React from 'react';
 import ContactDetail from './Components/Contactdetail';
 
 function App() {

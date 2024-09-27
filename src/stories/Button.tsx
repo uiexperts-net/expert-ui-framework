@@ -16,7 +16,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-/** Primary UI component for user interaction */
+
 
 import './button.css';
 
@@ -46,6 +46,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
+
 
 export const Button = ({
   primary = false,
