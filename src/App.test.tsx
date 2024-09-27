@@ -1,6 +1,17 @@
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import App from './App'; // Adjust if the path is different
+
+test('renders contact manager title', () => {
+  render(<App />);
+  const titleElement = screen.getByText(/Contact Manager/i);
+  expect(titleElement).toBeInTheDocument();
+});
+
+
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import TableComponent from './component/TableComponent';
 
 
@@ -171,6 +182,7 @@ test('renders Feedback component and checks functionality', () => {
   const updatedFeedbackElement = screen.getByText(/updated feedback message/i).parentElement;
   expect(updatedFeedbackElement).toHaveClass('feedback-success'); // Assuming the updated type is 'success'
 });
+
 
 
 

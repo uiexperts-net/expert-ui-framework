@@ -1,5 +1,14 @@
 
 import React from 'react';
+import ContactDetail from './Components/Contactdetail';
+
+function App() {
+  return (
+    <div style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f5f5f5' }}>
+      <ContactDetail name="Priyadharshini T" phoneNumber="9344334333" />
+
+
+import React from 'react';
 import './App.css';
 import TableComponent from './component/TableComponent';
  // Import the TableComponent
@@ -146,29 +155,13 @@ const App: React.FC = () => {
         type={feedback.type}
 
       />
-
-
-
-
     </div>
   );
 }
-
-
-
-
-
-
     <div>
       <h1>Button Example</h1>
       <ButtonComponent label="Click Me" onClick={handleClick} />
           </div>
   );
 };
-
-
-
-
-
-
 export default App;
