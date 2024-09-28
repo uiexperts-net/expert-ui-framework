@@ -31,6 +31,7 @@ describe('App Component', () => {
 export {};
 
 
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -225,6 +226,7 @@ test('renders Feedback component and checks functionality', () => {
   const updatedFeedbackElement = screen.getByText(/updated feedback message/i).parentElement;
   expect(updatedFeedbackElement).toHaveClass('feedback-success'); // Assuming the updated type is 'success'
 });
+
 
 
 

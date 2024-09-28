@@ -22,9 +22,15 @@ const App: React.FC = () => {
         }}
       >
         <Box sx={{ textAlign: 'center' }}>
+
+          <img src="/assets/close.png" alt="check" style={{ width: 81, height: 75 }} />
+          <Typography variant="h6" component="h1" gutterBottom>
+          Group “name”  has not been created
+
           <img src="/assets/check.png" alt="check" style={{ width: 81, height: 75 }} />
           <Typography variant="h6" component="h1" gutterBottom>
             Group "name" has been created successfully
+
           </Typography>
           <Box>
             <Typography variant="body1" color="textSecondary"></Typography>
@@ -34,6 +40,8 @@ const App: React.FC = () => {
     </div>
   );
 };
+
+
 
 
 
@@ -215,5 +223,6 @@ const App: React.FC = () => {
           </div>
   );
 };
+
 
 export default App;
