@@ -1,0 +1,105 @@
+.contactManager {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.appTitle {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconsRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.contactTitleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.contactTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: #6f42c1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+}
+
+.searchIcon {
+    color: white;
+}
+
+.contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    background-color: #7a3b4b;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactItem:hover {
+    background-color: #9e5b65;
+}
+
+/* Adjusted spacing between the icon and contact text */
+.listItemIcon {
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.listItemText {
+    flex: 1;
+    margin-left: 5px; /* Increased margin for better spacing */
+    font-size: 16px;
+}
