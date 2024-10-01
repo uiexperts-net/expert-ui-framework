@@ -1,13 +1,22 @@
 
 {
+  "name": "buttongroup-component",
+=======
+
+{
   "name": "button-component",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.105",
+
+    "@types/react": "^18.3.4",
+=======
     "@types/react": "^18.3.3",
+
     "@types/react-dom": "^18.3.0",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
@@ -62,7 +71,6 @@
     "webpack": "^5.93.0"
   }
 }
-=======
 
 {
   "name": "dd-cmpnt",
@@ -373,5 +381,6 @@
 
   }
 }
+
 
 
