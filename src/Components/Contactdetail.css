@@ -1,0 +1,121 @@
+/* General page layout and background */
+.contactManager {
+  padding: 20px;
+  background-color: #f7f7f7; /* Light grey background */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Centering the contact card container */
+.contact-card-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: calc(100vh - 100px); /* Adjust for header height */
+}
+
+/* Header section */
+.contactManager .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff; /* White background for header */
+  border-bottom: 1px solid #ddd; /* Slight bottom border */
+}
+
+.contactManager .appTitle {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+.contactManager .starLogo {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.contactManager .iconsRow {
+  display: flex;
+  align-items: center;
+}
+
+.contactManager .header-icon {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.contactManager .back-button {
+  color: #000;
+  margin-right: 20px;
+}
+
+/* Contact card section */
+.contactManager .contact-card {
+  background-color: #e7dde8 !important; /* Light violet background */
+  border: 1px solid #000; /* Box border */
+  margin-top: 20px; /* Adjust margin for spacing */
+  padding: 40px;
+  text-align: center;
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Optional: limit max width */
+  width: 100%; /* Ensure full width of the card */
+}
+
+/* Avatar section */
+.contactManager .avatar {
+  background-color: #6e57a5 !important; /* Darker purple for avatar */
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Name styling */
+.contactManager .name {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+
+/* Last name bold styling */
+.contactManager .bold-text {
+  font-weight: bold; /* Make last name bold */
+}
+
+/* Phone button styling */
+.contactManager .phone-button {
+  margin-top: 20px;
+  background-color: #75526b !important; /* Darker purple button */
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the button takes full width */
+  max-width: 300px; /* Optional, limit max width */
+  margin: 0 auto; /* Center the button */
+}
+
+/* Centering phone icon and number */
+.contactManager .phone-icon {
+  margin-right: 8px;
+}
+
+.contactManager .phone-number {
+  font-size: 16px;
+  color: white !important;
+  text-align: center; /* Center the text */
+}
+
+/* Add hover effects for buttons (optional) */
+.contactManager .phone-button:hover {
+  background-color: #60415b; /* Slightly darker purple when hovered */
+}
