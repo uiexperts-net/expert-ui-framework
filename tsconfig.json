@@ -1,5 +1,62 @@
 {
   "compilerOptions": {
+
+    "strict": true,
+    "module": "ESNext",
+    "target": "ES5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["jest", "@testing-library/jest-dom", "@storybook/react"],
+    "baseUrl": "./src",       // Optional: Allows absolute imports from `src`
+    "paths": {                // Optional: Define custom path aliases if needed
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "lib": ["DOM", "ESNext"],  // Optional: Include specific libraries like DOM or ESNext
+    "outDir": "./dist",        // Optional: Output compiled files to the `dist` folder
+    "sourceMap": true          // Optional: Generates source maps for easier debugging
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"],      // Optional: Ensure only source files are compiled
+  "compileOnSave": false        // Optional: Disable automatic compilation on file save
+}
+
+
+    "target": "es5",                         // Older ECMAScript target for compatibility
+    "lib": ["dom", "dom.iterable", "esnext"], // Include DOM and ESNext features
+    "jsx": "react-jsx",                      // Enable JSX with new JSX transform
+    "module": "esnext",                      // Use ESNext module system
+    "moduleResolution": "node",              // Use Node module resolution
+    "resolveJsonModule": true,               // Allow importing .json files
+    "isolatedModules": true,                 // Avoid errors in non-TS files
+    "esModuleInterop": true,                 // Allows default imports from CommonJS modules
+    "skipLibCheck": true,                    // Skip type checking of library declaration files
+    "strict": true,                          // Enable all strict type checking options
+    "allowSyntheticDefaultImports": true,    // Allows default imports from modules with no default
+    "forceConsistentCasingInFileNames": true,// Ensures file imports are case-sensitive
+    "noFallthroughCasesInSwitch": true,      // Ensures switch cases are exhaustive
+    "noEmit": true,                          // Prevents TypeScript from generating output files
+    "allowJs": true,                         // Allows JavaScript files to be compiled
+    "baseUrl": ".",                          // Base directory for resolving non-relative paths
+    "paths": {                               // Mapping for module resolution
+      "@components/*": ["src/components/*"],
+      "@stories/*": ["src/stories/*"]
+    }
+  },
+  "include": ["src"],                        // Files to be included in the project
+  "exclude": ["node_modules", ".storybook"]  // Exclude node_modules and Storybook config
+}
+
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+
+
+
     "target": "es5",
     "lib": [
       "dom",
