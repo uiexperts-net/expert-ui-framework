@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -48,7 +49,7 @@ test('renders the Primary Button and handles click event', () => {
 beforeAll(() => {
   jest.spyOn(window, 'alert').mockImplementation(() => {});
 });
-=======
+
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -288,5 +289,6 @@ test('renders Feedback component and checks functionality', () => {
   const updatedFeedbackElement = screen.getByText(/updated feedback message/i).parentElement;
   expect(updatedFeedbackElement).toHaveClass('feedback-success'); // Assuming the updated type is 'success'
 });
+
 
 
