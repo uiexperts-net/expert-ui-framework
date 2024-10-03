@@ -69,10 +69,28 @@ beforeAll(() => {
 });
 
 
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
+
+test('renders Floating Action Button', () => {
+  render(<App />);
+
+  const fabButton = screen.getByRole('button');
+  expect(fabButton).toBeInTheDocument();
+  expect(fabButton.querySelector('i')).toHaveClass('fas fa-plus');
+});
+
+test('clicking Floating Action Button triggers alert', () => {
+  render(<App />);
+
+  const fabButton = screen.getByRole('button');
+  window.alert = jest.fn();  // Mock alert
+  fabButton.click();
+  expect(window.alert).toHaveBeenCalledWith('Floating Action Button Clicked!');  // Update with the actual message
+=======
 test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
@@ -326,4 +344,5 @@ test('renders Feedback component and checks functionality', () => {
   // Check if the Feedback component has the correct class for the updated type
   const updatedFeedbackElement = screen.getByText(/updated feedback message/i).parentElement;
   expect(updatedFeedbackElement).toHaveClass('feedback-success'); // Assuming the updated type is 'success'
+
 });

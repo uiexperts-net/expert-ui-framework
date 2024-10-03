@@ -1,6 +1,8 @@
 
 =======
 
+=======
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -28,11 +30,15 @@ root.render(
 reportWebVitals();
 
 
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+=======
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -91,14 +97,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-=======
-
-
 
 
 import './index.css'; // You can use the same CSS file or create a new one
@@ -161,6 +165,7 @@ root.render(
 
 
 
+
     <App />
   </React.StrictMode>
 );
@@ -171,7 +176,6 @@ root.render(
 reportWebVitals();
 
 
-
-
 reportWebVitals();
+
 
