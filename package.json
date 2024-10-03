@@ -1,5 +1,9 @@
 
 {
+  "name": "dropdown_slider",
+=======
+
+{
   "name": "checkbox-component",
 =======
 
@@ -14,12 +18,23 @@
 {
   "name": "button-component",
 
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
+
+    "@types/node": "^16.18.106",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+=======
     "@types/node": "^16.18.105",
 
     "@types/react": "^18.3.4",
@@ -332,6 +347,11 @@
 
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.8.0",
+=======
+
+  },
+  "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@chromatic-com/storybook": "^2.0.2",
     "@storybook/addon-essentials": "^8.3.0",
@@ -393,6 +413,8 @@
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
 
+=======
+
     "@types/react": "^18.3.5",
     "@types/storybook__react": "^4.0.2",
 
@@ -401,10 +423,15 @@
     "storybook": "^8.2.9",
     "webpack": "^5.94.0"
 
+  }
+}
+=======
+
 
 
 
   }
 }
+
 
 

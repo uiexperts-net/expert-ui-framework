@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
 
-
     "strict": true,
     "module": "ESNext",
     "target": "ES5",
@@ -55,6 +54,7 @@
 
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+
 
 
 
