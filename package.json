@@ -1,5 +1,9 @@
 
 {
+  "name": "radiobutton-component",
+=======
+
+{
   "name": "floating_switch_text",
 =======
 
@@ -28,6 +32,9 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
 
+    "@types/node": "^16.18.105",
+=======
+
     "@types/node": "^16.18.106",
     "@types/react": "^18.3.5",
     "@types/react-bootstrap": "^0.32.37",
@@ -51,7 +58,6 @@
     "@types/react-dom": "^18.3.0",
     "bootstrap": "^5.3.3",
     "classnames": "^2.5.1",
-=======
 
     "@types/react": "^18.3.3",
 =======
@@ -64,13 +70,13 @@
     "@types/react-dom": "^18.3.0",
     "bootstrap": "^5.3.3",
 
+
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
-
-  },
+}
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -101,7 +107,7 @@
   "devDependencies": {
 
     "@chromatic-com/storybook": "^1.8.0",
-=======
+
     "@chromatic-com/storybook": "^1.7.0",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
@@ -118,13 +124,14 @@
     "@types/classnames": "^2.3.0",
 =======
 
+    "@types/classnames": "^2.3.0",
+
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.2.9",
     "webpack": "^5.93.0"
   }
 }
-
 
 {
   "name": "dd-cmpnt",
@@ -452,5 +459,3 @@
 
   }
 }
-
-
