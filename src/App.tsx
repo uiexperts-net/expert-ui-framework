@@ -1,4 +1,14 @@
 
+import React, { useState } from 'react';
+import Checkbox from './component/Checkbox';
+
+function App() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (checked: boolean) => {
+    setIsChecked(checked);
+=======
+
 
 import React from 'react';
 import ButtonGroup from './component/ButtonGroup';
@@ -202,10 +212,26 @@ function App() {
     setData(['Item 1', 'Item 2', 'Item 3']);
 
 
+
   };
 
   return (
     <div className="container mt-5">
+
+      <h1>Checkbox Component Example</h1>
+      <div className="form-check">
+        <Checkbox
+          label="Accept terms and conditions"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+=======
       <h1>Layout Component Example with Clickable Button</h1>
       <LayoutComponent
         header={<h1>Header Section</h1>}
@@ -288,5 +314,3 @@ const App: React.FC = () => {
 
 
 export default App;
-
-

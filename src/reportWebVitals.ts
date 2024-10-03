@@ -10,7 +10,6 @@ const reportWebVitals = (onPerfEntry?: (metric: any) => void) => {
     onTTFB(onPerfEntry);
 
 
-
 import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
